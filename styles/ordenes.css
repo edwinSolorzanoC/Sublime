@@ -1,0 +1,49 @@
+@import url(main.css);
+
+/* 
+
+font-family: "Permanent Marker", cursive;
+
+PALETA DE COLORES SUBLIEME---
+Naranja-
+#d35400
+Negro-
+#101010
+Blanco-
+#ffffff
+
+*/
+
+.portada{
+    padding: 10%;
+    text-align: center;
+}
+.portada img{
+    padding-bottom: 2%;
+    height: 50px;
+}
+
+.menu{
+    padding: 0% 10% 10% 10%;
+}
+.menu .titulito{
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 1%;
+    background-color: #d35400;
+}
+.menu .plato{
+    padding: 2%;
+}
+.menu .plato .datos{
+    display: flex;
+    font-weight: 500;
+}
+.menu .plato .datos p{
+    padding: 2% 10% 2% 0%;
+}
+
+.menu .nachos{
+    padding-top: 10%;
+}
+

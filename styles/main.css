@@ -65,6 +65,10 @@ footer{
 
     padding: 10%;
 }
+footer .imagen img{
+    height: 50px;
+    width: 50px;
+}
 
 /* --------------------- */
 .imagen{

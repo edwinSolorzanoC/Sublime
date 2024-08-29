@@ -28,14 +28,19 @@ Blanco-
 
     text-decoration: none;
 }
-.pedidos p ,.menu p{
-    padding-bottom: 5%;
+.pedidos .pasos{
+    padding: 2%;
+}
+.pedidos p{
+    padding: 1% 0%;
+}
+.pedidos h1{
+    padding: 5% 0%;
 }
 .menu{
     padding: 10%
 }
-
-footer .imagen img{
-    height: 50px;
-    width: 50px;
+.menu p{
+    padding: 5% 0%;
 }
+
