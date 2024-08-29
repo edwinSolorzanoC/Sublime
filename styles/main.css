@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+
+font-family: "Permanent Marker", cursive;
+
+PALETA DE COLORES SUBLIEME---
+Naranja-
+#d35400
+Negro-
+#101010
+Blanco-
+#ffffff
+
+*/
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    font-family: "Exo 2", sans-serif;
+
+    display: flex;
+    background-color: #d35400;
+    padding: 2%;
+}
+header .logo{
+    text-align: center;
+
+}
+header .logo img{
+    height: 50px;
+}
+
+header .navegacion{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+header .navegacion p{
+    padding: 0% 2%;
+}
+header .navegacion a{
+    color: #101010;
+    text-decoration: none;
+}
+
+main{
+    font-family: "Exo 2", sans-serif;
+    font-weight: 100;
+    background-color: #101010;
+    color: #ffffff;
+    
+    min-height: 90vh;
+    height: 100%;
+}
+
+footer{
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+    justify-content: center;
+
+    padding: 10%;
+}
+
+/* --------------------- */
+.imagen{
+    padding: 0% 10%;
+}
+.imagen img{
+    height: 100%;
+    width: 100%;
+}

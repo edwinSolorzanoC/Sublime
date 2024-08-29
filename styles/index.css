@@ -1,0 +1,41 @@
+@import url(main.css);
+
+/* 
+
+PALETA DE COLORES SUBLIEME---
+Naranja-
+#d35400
+Negro-
+#101010
+Blanco-
+#ffffff
+
+*/
+.portada{
+    padding: 20% 10%;
+}
+
+.pedidos{
+    padding: 10%;
+}
+
+.pedidos a, .menu a{
+    padding: 2% 10% 2% 2%;
+
+    color: #d35400;
+    border-bottom: 2px solid #d35400;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+.pedidos p ,.menu p{
+    padding-bottom: 5%;
+}
+.menu{
+    padding: 10%
+}
+
+footer .imagen img{
+    height: 50px;
+    width: 50px;
+}
