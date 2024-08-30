@@ -23,6 +23,25 @@ Blanco-
     height: 50px;
 }
 
+.orden{
+    padding: 5%;
+}
+.orden tbody tr td{
+    border-bottom: 1px solid #ffffff4e;
+    text-align: center;
+}
+.orden .edit{
+    border: none;
+}
+.orden button{
+    background-color: #ffffff;
+    color: #101010;
+
+    border: none;
+}
+.orden button:active{
+    background-color: #d35400;
+}
 .menu{
     padding: 0% 10% 10% 10%;
 }
@@ -41,6 +60,14 @@ Blanco-
 }
 .menu .plato .datos p{
     padding: 2% 10% 2% 0%;
+}
+.menu .plato button{
+    background-color: #ffffff;
+    color: #101010;
+
+    border: none;
+    border-radius: 80%;
+    padding: 0% 3%;
 }
 
 .menu .nachos{
