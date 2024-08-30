@@ -15,10 +15,27 @@ Blanco-
     padding: 20% 10%;
 }
 
+
+@media screen and (min-width:900px){
+    .portada{
+        padding: 10%;
+    }
+    .portada p{
+        padding: 0.5% 0%;
+    }
+}
+
+
 .pedidos{
     padding: 10%;
 }
 
+.pedidos p{
+    padding: 1% 0%;
+}
+.pedidos h1{
+    padding: 5% 0%;
+}
 .pedidos a, .menu a{
     padding: 2% 10% 2% 2%;
 
@@ -31,16 +48,36 @@ Blanco-
 .pedidos .pasos{
     padding: 2%;
 }
-.pedidos p{
-    padding: 1% 0%;
+
+@media screen and (min-width:900px){
+    .pedidos{
+        padding: 5% 10%;
+    }
+    .pedidos p{
+        padding: 0.5% 0%;
+    }
+    .pedidos h1{
+        padding: 0%;
+    }
+    .pedidos .pasos{
+        padding: 2%;
+    }
 }
-.pedidos h1{
-    padding: 5% 0%;
-}
+
+
+
 .menu{
     padding: 10%
 }
 .menu p{
     padding: 5% 0%;
+}
+@media screen and (min-width:900px){
+    .menu{
+        padding: 5% 10%;
+    }
+    .menu p{
+        padding: 0.5% 0%;
+    }
 }
 

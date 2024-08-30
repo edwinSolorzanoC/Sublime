@@ -71,10 +71,17 @@ footer .imagen img{
 }
 
 /* --------------------- */
+
 .imagen{
     padding: 0% 10%;
 }
 .imagen img{
     height: 100%;
     width: 100%;
+}
+@media screen and (min-width:900px){
+    .imagen img{
+        height: 40%;
+        width: 40%;
+    }
 }

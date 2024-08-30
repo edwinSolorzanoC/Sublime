@@ -15,7 +15,7 @@ Blanco-
 */
 
 .portada{
-    padding: 10%;
+    padding: 10% 10% 5% 10%;
     text-align: center;
 }
 .portada img{
@@ -23,27 +23,37 @@ Blanco-
     height: 50px;
 }
 
+
 .orden{
     padding: 5%;
+    text-align: center;
 }
 .orden tbody tr td{
     border-bottom: 1px solid #ffffff4e;
     text-align: center;
+    padding-bottom: 1%;
 }
-.orden .edit{
+.orden .btn{
+    text-align: end;
+}
+.orden .btn button{
     border: none;
-}
-.orden button{
+    border-radius: 5%;
+    padding: 2%;
+    margin: 2%;
+
     background-color: #ffffff;
     color: #101010;
+}
+.orden button:active , .menu .plato button:active{
+    background-color: #f59c60;
+}
 
-    border: none;
-}
-.orden button:active{
-    background-color: #d35400;
-}
 .menu{
     padding: 0% 10% 10% 10%;
+}
+.menu .titulo{
+    text-align: center;
 }
 .menu .titulito{
     text-align: center;
