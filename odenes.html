@@ -22,7 +22,7 @@
         <section class="navegacion">
             <p><a href="index.html">INICIO</a></p>
             <p><a href="menu.html">MENÚ</a></p>
-            <p><a href="">INFORMACION</a></p>
+            <p><a href="informacion.html">INFORMACION</a></p>
         </section> 
     </header>
 
@@ -31,37 +31,61 @@
         <section class="portada">
             <img src="img/448245078_122174641946064921_5933633073358415459_n.jpg" alt="">
             <h1>REALIZA TU ORDEN</h1>
-            <p>Nuestro menú</p>
+            <div class="iniciar">
+                <button type="submit">INICIAR ORDEN</button>
+            </div>
+
+            <div class="datos">
+
+                <div class="usuario">
+                    <p style="padding: 1% 0%;">Ingresa tus datos de contacto</p>
+                    <div class="nombre">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="">
+                    </div>
+                    <div class="numero">
+                        <label for="numero">Telefono:</label>
+                        <input type="number" name="numero" id="">
+                    </div>
+                </div>
+                <div class="orden">
+                    <p style="padding: 2% 0%;">Tu orden</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PLATILLOS</th>
+                                <th>DETALLE ORDEN</th>
+                                <th>PRECIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sublime</td>
+                                <td>Sin cebolla sin lechuga y sin tomate</td>
+                                <td>5500</td>
+                            </tr>
+                            <tr>
+                                <td>Sublime</td>
+                                <td>Sin cebolla sin lechuga sin tomate y sin mermelada bacon</td>
+                                <td>5500</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>PRECIO TOTAL</td>
+                                <td></td>
+                                <td>11000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                
+            </div>
+
         </section>
 
         <section class="orden">
-            <table>
-                <p style="padding-bottom: 2%;">- TU ORDEN -</p>
-                <thead>
-                    <tr>
-                        <th>Platillo</th>
-                        <th>Detalle</th>
-                        <th>Precio</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sublime</td>
-                        <td>Sin Cebolla, sin lechuga y sin tomate</td>
-                        <td>5500</td>
-                    </tr>
-                    <tr>
-                        <td>Nachos de Pollo</td>
-                        <td >Sin pico de gallo y sin cebolla</td>
-                        <td>5500</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="btn">
-                <button id="alertaFinalizarOrden">FINALIZAR ORDEN</button>
-            </div>
-
         </section>
 
         <section class="menu">
@@ -115,8 +139,6 @@
 
         </section>
 
-        
-       
 
     </main>
 

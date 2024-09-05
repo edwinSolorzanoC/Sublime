@@ -23,31 +23,31 @@ Blanco-
     height: 50px;
 }
 
-
-.orden{
-    padding: 5%;
-    text-align: center;
-}
-.orden tbody tr td{
-    border-bottom: 1px solid #ffffff4e;
-    text-align: center;
-    padding-bottom: 1%;
-}
-.orden .btn{
-    text-align: end;
-}
-.orden .btn button{
-    border: none;
-    border-radius: 5%;
-    padding: 2%;
-    margin: 2%;
+.portada .iniciar button{
+    padding: 2% 10%;
+    margin: 5%;
 
     background-color: #ffffff;
-    color: #101010;
+    color: #101010;    
 }
-.orden button:active , .menu .plato button:active{
-    background-color: #f59c60;
+.portada .datos .usuario div{
+    padding: 2% 0%;
+    display: flex;
+    justify-content: space-between;
 }
+.portada .datos .usuario div input{
+    padding: 1% 1%;
+    background-color: rgba(255, 255, 255, 0.838); 
+    border: none;
+    border-radius: 10px;
+}
+.portada .datos .orden tbody tr{
+    background-color: rgba(255, 255, 255, 0.135); 
+}
+.portada .datos .orden tfoot tr{
+    background-color: rgba(0, 128, 0, 0.263);
+}
+
 
 .menu{
     padding: 0% 10% 10% 10%;

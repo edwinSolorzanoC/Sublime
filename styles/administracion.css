@@ -1,0 +1,9 @@
+@import url(main.css);
+
+.ordenes{
+    padding: 10%;
+}
+
+.ordenes tbodys tr{
+    padding: 2% 05;
+}
