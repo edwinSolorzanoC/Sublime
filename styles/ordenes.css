@@ -26,6 +26,7 @@ Blanco-
 .portada .iniciar button{
     padding: 2% 10%;
     margin: 5%;
+    border-radius: 10px;
 
     background-color: #ffffff;
     color: #101010;    
@@ -36,16 +37,38 @@ Blanco-
     justify-content: space-between;
 }
 .portada .datos .usuario div input{
-    padding: 1% 1%;
+    padding: 2% 1%;
     background-color: rgba(255, 255, 255, 0.838); 
     border: none;
     border-radius: 10px;
+}
+.portada .datos .usuario .tipoPago{
+    justify-content: start;
+}
+.portada .datos .usuario .tipoPago input{
+    margin-right: 5%;
+}
+.portada .datos .usuario .sinpe{
+    display: block;
+    text-align: start;
+}
+.portada .datos .usuario .sinpe input{
+    margin: 2% 0%;
+    color: #101010;
 }
 .portada .datos .orden tbody tr{
     background-color: rgba(255, 255, 255, 0.135); 
 }
 .portada .datos .orden tfoot tr{
     background-color: rgba(0, 128, 0, 0.263);
+}
+.portada .datos .orden button{
+    padding: 2% 10%;
+    margin: 5%;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+    color: #101010;  
 }
 
 
