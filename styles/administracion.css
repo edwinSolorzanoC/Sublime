@@ -1,5 +1,16 @@
 @import url(main.css);
 
+/* 
+
+PALETA DE COLORES SUBLIEME---
+Naranja-
+#d35400
+Negro-
+#101010
+Blanco-
+#ffffff
+
+*/
 .ordenes{
     padding: 8%;
 }
@@ -13,4 +24,11 @@
 }
 .ordenes .orden li p{
     padding-left: 2%;
+}
+.ordenes .orden ul li button{
+    padding: 1% 2%;
+    margin: 2%;
+    background-color: #d33;
+    border: none;
+    color: #101010;
 }
