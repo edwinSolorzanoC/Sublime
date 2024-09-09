@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   var botonIniciar = document.getElementById('iniciar');
   var botonAgregar = document.getElementById('agregar');
-  
+  var botonFinalizar = document.getElementById('finalizar');
   
   botonAgregar.addEventListener('click', function() {
     
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
       }
     });
-    
+
   });
 
   botonIniciar.addEventListener('click', function(){
@@ -67,6 +67,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
       })
   });
+
+
+  botonFinalizar.addEventListener('click', function(){
+    Swal.fire({
+      title: '¿Deseas Finalizar la orden ?',
+      text: 'Una vez finalises la orden tus datos seran enviados a nuestro personal para iniciar a preparar tu pedido',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#d35400',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'INICIAR',
+      cancelButtonText: 'CANCELAR',
+      background: '#ffffff'
+    }).then((result) => {
+        
+      if (result.isConfirmed) {
+        Swal.fire("Orden enviada con exito!");
+        datos.style.display = "none";
+      }
+
+    })
+  })
 
 
 });
