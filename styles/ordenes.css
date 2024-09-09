@@ -31,6 +31,9 @@ Blanco-
     background-color: #ffffff;
     color: #101010;    
 }
+.portada .datos{
+    display: none;
+}
 .portada .datos .usuario div{
     padding: 2% 0%;
     display: flex;
