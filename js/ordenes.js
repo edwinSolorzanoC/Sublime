@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
                   title: 'Platillo añadido a la orden',
                   timer: 1500,
+                  position: "top-end",
                   icon: 'success',
                   showConfirmButton: false,
                   text: `Detalle agregado: ${result.value}`,
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   title: 'Platillo añadido a la orden',
                   timer: 1500,
                   icon: 'success',
+                  position: "top-end",
                   showConfirmButton: false,
                   text: `Detalle agregado: ${result.value}`,
                 })
