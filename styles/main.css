@@ -39,6 +39,7 @@ header .navegacion{
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 header .navegacion p{
     padding: 0% 2%;

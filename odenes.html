@@ -22,8 +22,9 @@
         <section class="navegacion">
             <p><a href="index.html">INICIO</a></p>
             <p><a href="menu.html">MENÚ</a></p>
+            <p><a href="odenes.html">ORDENAR</a></p>
             <p><a href="informacion.html">INFORMACION</a></p>
-        </section> 
+        </section>  
     </header>
 
     <main>
@@ -32,7 +33,7 @@
             <img src="img/448245078_122174641946064921_5933633073358415459_n.jpg" alt="">
             <h1>REALIZA TU ORDEN</h1>
             <div class="iniciar">
-                <button id="iniciar">INICIAR ORDEN</button>
+                <button id="iniciar" class="iniciar">INICIAR ORDEN</button>
             </div>
 
             <div class="datos" id="datos">
@@ -88,7 +89,11 @@
                         </tfoot>
                     </table>
 
-                    <button id="finalizar">FINALIZAR ORDEN</button>
+                    <div class="opciones">
+                        <button id="finalizar">FINALIZAR ORDEN</button>
+                        <button id="cancelar">CANCELAR ORDEN</button>
+                    </div>
+                    
                 </div>
                 
             </div>
@@ -109,7 +114,7 @@
                     <div class="datos">
                         <p>Sublime</p>
                         <p>5500</p>
-                        <button id="agregar"><i class="fa-solid fa-plus"></i></button>
+                        <button id="agregar" class="agregar"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="ingredientes">
                         <p>Pan Brioche, Torta Smash X2, Queso Cheddar X1, Queso Empanizado X1, Mermelada de Bacon, Lechuga, Tomate, Cebolla Morada y Mostaza Miel</p>
@@ -120,7 +125,7 @@
                     <div class="datos">
                         <p>Smash</p>
                         <p>4500</p>
-                        <button id=""><i class="fa-solid fa-plus"></i></button>
+                        <button id="agregar" class="agregar"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="ingredientes">
                         <p>Pan Brioche, Torta Smash X2, Queso Cheddar X2, Pepinillos y Salsa Americana</p>
@@ -138,7 +143,7 @@
                     <div class="datos">
                         <p>Nachos de Pollo</p>
                         <p>4500</p>
-                        <button><i class="fa-solid fa-plus"></i></button>
+                        <button id="agregar" class="agregar"><i class="fa-solid fa-plus"></i></button>
                     </div>
                     <div class="ingredientes">
                         <p>Chips de Tortilla, Fijitas Salteadas con chile Dulce, Cebolla, Frijoles Molitos, Queso Chedar, Queso Mozarella, Pico de Gallo, Guacamole y Natilla</p>
@@ -162,9 +167,7 @@
         </section>
     </footer>
     
-    <script type="module" src="js/alertas.js"></script>
-    <script src="js/ordenes.js"></script>
-
+    <script type="module" src="js/ordenes.js"></script>
     
 </body>
 </html>
