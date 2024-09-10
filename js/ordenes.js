@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
               inputPlaceholder: 'Añade descripcion aquí',
               showCancelButton: true,
               confirmButtonText: 'CONFIRMAR',
-              cancelButtonText: 'CANCELAR',
+              cancelButtonText: 'NO AGREGAR DETALLE',
               cancelButtonColor: '#d33',
               confirmButtonColor: '#d35400',
               inputValidator: (value) => {
@@ -39,8 +39,23 @@ document.addEventListener('DOMContentLoaded', function() {
               }
             }).then((result) => {
               if (result.isConfirmed) {
-                Swal.fire(`Detalle agregado: ${result.value}`);
-              }
+                Swal.fire({
+                  title: 'Platillo añadido a la orden',
+                  timer: 1500,
+                  icon: 'success',
+                  showConfirmButton: false,
+                  text: `Detalle agregado: ${result.value}`,
+                })
+                // Swal.fire(`Detalle agregado: ${result.value}`);
+              } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire({
+                  title: 'Platillo añadido a la orden',
+                  timer: 1500,
+                  icon: 'success',
+                  showConfirmButton: false,
+                  text: `Detalle agregado: ${result.value}`,
+                })
+            }
             });
       }
     });
@@ -75,19 +90,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   botonFinalizar.addEventListener('click', function(){
     Swal.fire({
-      title: '¿Deseas Finalizar la orden ?',
-      text: 'Una vez finalizada la orden, tus datos seran enviados a nuestro personal, para iniciar a preparar tu pedido',
+      title: '¿Deseas Confirmar la orden ?',
+      text: 'Una vez confirmada y finalizada la orden, tus datos seran enviados a nuestro personal, para iniciar a preparar tu pedido',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#d35400',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'FINALIZAR',
+      confirmButtonText: 'CONFIRMAR',
       cancelButtonText: 'CANCELAR',
       background: '#ffffff'
     }).then((result) => {
         
       if (result.isConfirmed) {
-        Swal.fire("Orden enviada con exito!");
+        Swal.fire({
+          title: 'ORDEN ENVIADA CON EXITO',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false,
+        })
         datos.style.display = "none";
         iniciar.style.display = ""
         botonAgregar.style.display = "none"
@@ -112,7 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }).then((result) => {
         
       if (result.isConfirmed) {
-        Swal.fire("Orden Cancelada!");
+        Swal.fire({
+          title: "Orden Cancelada",
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false,
+        })
         datos.style.display = "none";
         iniciar.style.display = ""
         botonAgregar.style.display = "none"
