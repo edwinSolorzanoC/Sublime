@@ -8,11 +8,36 @@ document.addEventListener('DOMContentLoaded', function() {
   var botonFinalizar = document.getElementById('finalizar');
   var botonCancelar = document.getElementById('cancelar');
 
+
+  botonIniciar.addEventListener('click', function(){
+    Swal.fire({
+        title: '¿DESEAS RELIZAR PEDIDO?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#d35400',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'INICIAR',
+        cancelButtonText: 'CANCELAR',
+        background: '#ffffff'
+    }).then((result) => {
+      
+      if (result.isConfirmed) {
+        datos.style.display = "block";
+        iniciar.style.display = "none"
+        botonAgregar.style.display = "block"
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+        datos.style.display = "none";
+        botonAgregar.style.display = "none"
+    }
+
+    })
+});
+
+
   botonAgregar.addEventListener('click', function() {
     
     Swal.fire({
-      title: '¿Deseas Agregar este platillo a tu orden?',
-      text: "",
+      title: '¿DESEAS AGREGAR SUBLIME A TU ORDEN?',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#d35400',
@@ -23,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }).then((result) => {
       if (result.isConfirmed) {
           Swal.fire({
-              title: 'Agrega detalle',
-              text: "Esto en caso de modificar algo del platillo seleccionado",
+              title: '¿AGREGAR DETALLE A TU PLATILLO?',
+              text: "¿Deseas personalizar tu platillo?",
               input: 'text',
-              inputPlaceholder: 'Añade descripcion aquí',
+              inputPlaceholder: 'Añade detalle aquí',
               showCancelButton: true,
               confirmButtonText: 'CONFIRMAR',
               cancelButtonText: 'NO AGREGAR DETALLE',
@@ -40,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }).then((result) => {
               if (result.isConfirmed) {
                 Swal.fire({
-                  title: 'Platillo añadido a la orden',
-                  timer: 1500,
+                  title: 'PLATILLO AÑADIDO A LA ORDEN',
+                  timer: 2000,
                   position: "top-end",
                   icon: 'success',
                   showConfirmButton: false,
@@ -50,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Swal.fire(`Detalle agregado: ${result.value}`);
               } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire({
-                  title: 'Platillo añadido a la orden',
-                  timer: 1500,
+                  title: 'PLATILLO AÑADIDO A LA ORDEN',
+                  timer: 2000,
                   icon: 'success',
                   position: "top-end",
                   showConfirmButton: false,
@@ -64,36 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 
-  botonIniciar.addEventListener('click', function(){
-      Swal.fire({
-          title: '¿Deseas iniciar tu orden?',
-          text: "Empieza a crear tu orden",
-          icon: 'question',
-          showCancelButton: true,
-          confirmButtonColor: '#d35400',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'INICIAR',
-          cancelButtonText: 'CANCELAR',
-          background: '#ffffff'
-      }).then((result) => {
-        
-        if (result.isConfirmed) {
-          datos.style.display = "block";
-          iniciar.style.display = "none"
-          botonAgregar.style.display = "block"
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-          datos.style.display = "none";
-          botonAgregar.style.display = "none"
-      }
-
-      })
-  });
+ 
 
 
-  botonFinalizar.addEventListener('click', function(){
+  botonFinalizar.addEventListener('click', async function(){
     Swal.fire({
-      title: '¿Deseas Confirmar la orden ?',
-      text: 'Una vez confirmada y finalizada la orden, tus datos seran enviados a nuestro personal, para iniciar a preparar tu pedido',
+      title: '¿DESEAS CONFIRMAR TU PEDIDO?',
+      text: 'Una vez confirmada la orden, tus datos seran enviados a nuestro personal, para iniciar a preparar tu pedido',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#d35400',
@@ -101,9 +103,38 @@ document.addEventListener('DOMContentLoaded', function() {
       confirmButtonText: 'CONFIRMAR',
       cancelButtonText: 'CANCELAR',
       background: '#ffffff'
-    }).then((result) => {
+    }).then( async (result) => {
         
       if (result.isConfirmed) {
+
+
+        const { value: formValues } = await Swal.fire({
+          title: "AGREGA TUS DATOS DE CONTACTO",
+          text: 'Debes ingregar tus datos de contacto para confirmar la orden con exito',
+          html: `
+            <label for="nombre">Nombre:</label>
+            <input id="nombreUsusario" class="swal2-input">
+            <label for="numero">Telefono:</label>
+            <input id="numeroTelefono" class="swal2-input">
+            <label for="sinpe">Añadir comprobante de pago:</label>
+            <input type="file" name="sinpe" id="pagoSinpe" class="swal2">
+          `,
+          confirmButtonColor: '#d35400',
+          focusConfirm: false,
+          preConfirm: () => {
+            return [
+              document.getElementById("nombreUsusario").value,
+              document.getElementById("numeroTelefono").value,
+              document.getElementById("pagoSinpe").value
+            ];
+          }
+        });
+        if (formValues) {
+          Swal.fire(JSON.stringify(formValues));
+        }
+
+        
+        /*
         Swal.fire({
           title: 'ORDEN ENVIADA CON EXITO',
           icon: 'success',
@@ -113,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         datos.style.display = "none";
         iniciar.style.display = ""
         botonAgregar.style.display = "none"
+        */
       }
 
     })
@@ -122,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
   botonCancelar.addEventListener('click',function(){
 
     Swal.fire({
-      title: '¿Deseas Cancelar la orden ?',
+      title: '¿DESEAS CANCELAR LA ORDEN?',
       text: 'Una vez cancelada la orden, tus registros anteriores se perderan',
       icon: 'question',
       showCancelButton: true,
@@ -136,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Orden Cancelada",
-          icon: 'success',
+          icon: 'error',
           timer: 2000,
           showConfirmButton: false,
         })
