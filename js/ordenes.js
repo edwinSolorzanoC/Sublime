@@ -93,17 +93,24 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
 
-  botonFinalizar.addEventListener('click', async function(){
+  botonFinalizar.addEventListener('click', async function(event){
     
-    
+    event.preventDefault();
+
     var nombre = document.getElementById("nombre").value;
     var numero = document.getElementById("numero").value;
     var imagen = document.getElementById("imagen").value;
 
     if(nombre === "" || numero === "" || imagen === ""){
 
-      console.log("ERROR EN LINEA 47 ARCHIVO ORDENES JS")
-    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Por favor, complete todos los campos antes de continuar',
+        timer: 2000,
+        showConfirmButton: false,
+      });
+
+    } else{
 
       Swal.fire({
         title: '¿DESEAS CONFIRMAR TU PEDIDO?',
@@ -135,9 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       
     }
-    
-
-    
     
   });
 
