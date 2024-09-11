@@ -35,28 +35,19 @@ Blanco-
     display: none;
 }
 .portada .datos .usuario div{
-    padding: 2% 0%;
-    display: flex;
-    justify-content: space-between;
+    text-align: start;
+    display: block;
+
 }
 .portada .datos .usuario div input{
-    padding: 2% 1%;
+    width: 90%;
+    padding: 3% 2%;
+    margin: 1.5% 0%;
     background-color: rgba(255, 255, 255, 0.838); 
     border: none;
     border-radius: 10px;
 }
-.portada .datos .usuario .tipoPago{
-    justify-content: start;
-}
-.portada .datos .usuario .tipoPago input{
-    margin-right: 5%;
-}
-.portada .datos .usuario .sinpe{
-    display: block;
-    text-align: start;
-}
 .portada .datos .usuario .sinpe input{
-    margin: 2% 0%;
     color: #101010;
 }
 

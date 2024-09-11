@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   botonAgregar.addEventListener('click', function() {
+
     
     Swal.fire({
       title: '¿DESEAS AGREGAR SUBLIME A TU ORDEN?',
@@ -93,61 +94,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   botonFinalizar.addEventListener('click', async function(){
-    Swal.fire({
-      title: '¿DESEAS CONFIRMAR TU PEDIDO?',
-      text: 'Una vez confirmada la orden, tus datos seran enviados a nuestro personal, para iniciar a preparar tu pedido',
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonColor: '#d35400',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'CONFIRMAR',
-      cancelButtonText: 'CANCELAR',
-      background: '#ffffff'
-    }).then( async (result) => {
-        
-      if (result.isConfirmed) {
+    
+    
+    var nombre = document.getElementById("nombre").value;
+    var numero = document.getElementById("numero").value;
+    var imagen = document.getElementById("imagen").value;
 
+    if(nombre === "" || numero === "" || imagen === ""){
 
-        const { value: formValues } = await Swal.fire({
-          title: "AGREGA TUS DATOS DE CONTACTO",
-          text: 'Debes ingregar tus datos de contacto para confirmar la orden con exito',
-          html: `
-            <label for="nombre">Nombre:</label>
-            <input id="nombreUsusario" class="swal2-input">
-            <label for="numero">Telefono:</label>
-            <input id="numeroTelefono" class="swal2-input">
-            <label for="sinpe">Añadir comprobante de pago:</label>
-            <input type="file" name="sinpe" id="pagoSinpe" class="swal2">
-          `,
-          confirmButtonColor: '#d35400',
-          focusConfirm: false,
-          preConfirm: () => {
-            return [
-              document.getElementById("nombreUsusario").value,
-              document.getElementById("numeroTelefono").value,
-              document.getElementById("pagoSinpe").value
-            ];
-          }
-        });
-        if (formValues) {
-          Swal.fire(JSON.stringify(formValues));
+      console.log("ERROR EN LINEA 47 ARCHIVO ORDENES JS")
+    }else{
+
+      Swal.fire({
+        title: '¿DESEAS CONFIRMAR TU PEDIDO?',
+        text: 'Una vez confirmada la orden, tus datos seran enviados a nuestro personal, para iniciar a preparar tu pedido',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#d35400',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'CONFIRMAR',
+        cancelButtonText: 'CANCELAR',
+        background: '#ffffff'
+      }).then( async (result) => {
+          
+        if (result.isConfirmed) {
+  
+  
+          Swal.fire({
+            title: 'ORDEN ENVIADA CON EXITO',
+            icon: 'success',
+            timer: 2000,
+            showConfirmButton: false,
+          })
+          datos.style.display = "none";
+          iniciar.style.display = ""
+          botonAgregar.style.display = "none"
+         
         }
+  
+      })
+      
+    }
+    
 
-        
-        /*
-        Swal.fire({
-          title: 'ORDEN ENVIADA CON EXITO',
-          icon: 'success',
-          timer: 2000,
-          showConfirmButton: false,
-        })
-        datos.style.display = "none";
-        iniciar.style.display = ""
-        botonAgregar.style.display = "none"
-        */
-      }
-
-    })
+    
+    
   });
 
 

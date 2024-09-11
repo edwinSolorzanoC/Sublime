@@ -39,68 +39,65 @@
 
             <div class="datos" id="datos">
 
-                <!-- 
-                <div class="usuario">
-                    <p style="padding: 1% 0%;">Ingresa tus datos de contacto</p>
-                    <div class="nombre">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="">
-                    </div>
-                    <div class="numero">
-                        <label for="numero">Telefono:</label>
-                        <input type="number" name="numero" id="">
-                    </div>
-                    <div class="tipoPago">
-                        <input type="checkbox" name="" id="">
-                        <label for="checkbox">Pago en Efectivo</label>
-                    </div>
-                    <div class="sinpe">
-                        <label for="sinpe">Añadir comprobante de pago:</label>
-                        <input type="file" name="sinpe" id="">
-                    </div>
-                </div>
-                
-                -->
-                
-
-                <div class="orden">
-                    <p style="padding: 2% 0%;">Tu orden</p>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>PLATILLOS</th>
-                                <th>DETALLE ORDEN</th>
-                                <th>PRECIO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sublime</td>
-                                <td>Sin cebolla sin lechuga y sin tomate</td>
-                                <td>5500</td>
-                            </tr>
-                            <tr>
-                                <td>Sublime</td>
-                                <td>Sin cebolla sin lechuga sin tomate y sin mermelada bacon</td>
-                                <td>5500</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>PRECIO TOTAL</td>
-                                <td></td>
-                                <td>11000</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-
-                    <div class="opciones">
-                        <button id="finalizar">CONFIRMAR ORDEN</button>
-                        <button id="cancelar">CANCELAR ORDEN</button>
+                <form action="">
+                    
+                    <div class="usuario">
+                        <p style="padding: 1% 0%;">Ingresa tus datos de contacto</p>
+                        <div class="nombre">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" required>
+                        </div>
+                        <div class="numero">
+                            <label for="numero">Telefono:</label>
+                            <input type="number" name="numero" id="numero" required>
+                        </div>
+                        <div class="sinpe">
+                            <label for="sinpe">Añadir comprobante de pago:</label>
+                            <input type="file" name="sinpe" id="imagen" required>
+                        </div>
                     </div>
                     
-                </div>
+                    <div class="orden">
+                        <p style="padding: 2% 0%;">Tu orden</p>
+    
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>PLATILLOS</th>
+                                    <th>DETALLE ORDEN</th>
+                                    <th>PRECIO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sublime</td>
+                                    <td>Sin cebolla sin lechuga y sin tomate</td>
+                                    <td>5500</td>
+                                </tr>
+                                <tr>
+                                    <td>Sublime</td>
+                                    <td>Sin cebolla sin lechuga sin tomate y sin mermelada bacon</td>
+                                    <td>5500</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>PRECIO TOTAL</td>
+                                    <td></td>
+                                    <td>11000</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <div class="opciones">
+                            <button id="finalizar">CONFIRMAR ORDEN</button>
+                            <button id="cancelar">CANCELAR ORDEN</button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                
                 
             </div>
 
