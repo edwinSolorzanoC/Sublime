@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   icon: 'success',
                   position: "top-end",
                   showConfirmButton: false,
-                  text: `Detalle agregado: ${result.value}`,
+                  text: `Sin detalle`,
                 })
             }
             });
