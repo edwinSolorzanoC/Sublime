@@ -29,3 +29,22 @@
     background-color: #ffffff;
     color: #101010;
 }
+.ubicacion{
+    padding: 5% 10%;
+}
+
+.ubicacion iframe{
+    width: 100%;
+    height: 100%;
+
+    padding: 5% 0%;
+}
+
+.parqueo{
+    padding: 5% 10%;
+}
+.parqueo img{
+    padding: 2% 0%;
+    height: 100%;
+    width: 100%;
+}
