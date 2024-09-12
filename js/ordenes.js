@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
               inputPlaceholder: 'Añade detalle aquí',
               showCancelButton: true,
               confirmButtonText: 'CONFIRMAR',
-              cancelButtonText: 'NO AGREGAR DETALLE',
+              cancelButtonText: 'AGREGAR SIN DETALLE',
               cancelButtonColor: '#d33',
               confirmButtonColor: '#d35400',
               inputValidator: (value) => {
