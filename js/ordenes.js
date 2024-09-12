@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       Swal.fire({
         icon: 'error',
-        title: 'Por favor, complete todos los campos antes de continuar',
+        title: 'Por favor, complete tus datos personales solicitados antes de continuar',
         timer: 2000,
         showConfirmButton: false,
       });
